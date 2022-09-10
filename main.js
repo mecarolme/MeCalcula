@@ -62,7 +62,6 @@ function changeTheme(theme) {
 const previousOperationText = document.querySelector("#previous-operation")
 const currentOperationText = document.querySelector("#current-operation")
 const buttons = document.querySelectorAll("#buttons-container button")
-const calc = new Calculator(previousOperationText, currentOperationText);
 
 // lógica da aplicação
 class Calculator {
@@ -162,7 +161,7 @@ class Calculator {
 
     // mudar valores na tela
     updateScreen(operationValue = null, operation = null, current = null, previous = null) {
-        console.log(operationValue, operation, current, previous)
+        //console.log(operationValue, operation, current, previous)
 
         if(operationValue === null) {
             this.currentOperationText.innerText += this.currentOperation;
@@ -202,8 +201,9 @@ class Calculator {
 
         this.processOperation(operation);
     }
-    
 }
+
+const calc = new Calculator(previousOperationText, currentOperationText);
 
 // eventos onde vão fazer a calc funfa
 buttons.forEach((btn) => {
