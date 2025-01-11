@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 2em 5em;
+    overflow: hidden;
 }
 
 #calc {
@@ -113,13 +114,26 @@ body {
     color: var(--btnTEXTOpCalc);   
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin 0.6s ease;
+}
+
 .control {
     width: 35vw;
     height: 90vh;
-    margin-left: 1em;
     padding: 1em;
-    border: 1px solid var(--colorAll);;
+    border: 1px solid var(--colorAll);
     border-radius: 0.7em;
+    position: fixed; 
+    right: -35vw; 
+    transition: right 1s ease; 
+}
+
+.control.active {
+    right: 0; 
 }
 
 #boxTheme {
@@ -149,13 +163,23 @@ body {
 #history-list {
     list-style: none;
     padding: 0;
-
     overflow-y: auto;
 }
 
 #history-list li {
     margin-bottom: 5px;
     font-size: 2em;
+}
+
+.toggle-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    color: var(--colorAll);
+    left: -1.2em; 
 }
 
 @media (max-width: 900px) {

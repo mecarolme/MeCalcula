@@ -47,6 +47,25 @@ function changeTheme(theme) {
   }
 }
 
+const toggleButton = document.querySelector("#toggleControl");
+const controlMenu = document.querySelector("#controlMenu");
+const wrapper = document.querySelector(".wrapper");
+const control = document.querySelector(".control");
+
+toggleButton.addEventListener("click", () => {
+  controlMenu.classList.toggle("active");
+
+  if (controlMenu.classList.contains("active")) {
+    wrapper.style.marginRight = "35vw"; 
+    control.style.marginRight = "15vw"; 
+    toggleButton.innerHTML = "&#x2192;"; 
+  } else {
+    wrapper.style.marginRight = "0"; 
+    control.style.marginRight = "0"; 
+    toggleButton.innerHTML = "&#x2190;";
+  }
+});
+
 const previousOperationText = document.querySelector("#previous-operation");
 const currentOperationText = document.querySelector("#current-operation");
 const buttons = document.querySelectorAll("#buttons-container button");

@@ -18,49 +18,52 @@
   </head>
 
   <body>
-    <div id="calc">
-      <h3>MeCalcula</h3>
+    <div class="wrapper">
+      <div id="calc">
+        <h3>MeCalcula</h3>
 
-      <div id="operations">
-        <div id="previous-operation"></div>
-        <div id="current-operation"></div>
+        <div id="operations">
+          <div id="previous-operation"></div>
+          <div id="current-operation"></div>
+        </div>
+
+        <div id="buttons-container">
+          <button class="calcOp">CE</button>
+          <button class="calcOp">C</button>
+          <button class="calcOp">DEL</button>
+          <button class="fourOp">/</button>
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+          <button class="fourOp">*</button>
+          <button class="number">4</button>
+          <button class="number">5</button>
+          <button class="number">6</button>
+          <button class="fourOp">-</button>
+          <button class="number">1</button>
+          <button class="number">2</button>
+          <button class="number">3</button>
+          <button class="fourOp">+</button>
+          <button class="number">0</button>
+          <button class="number">.</button>
+          <button id="equal-btn">=</button>
+        </div>
       </div>
 
-      <div id="buttons-container">
-        <button class="calcOp">CE</button>
-        <button class="calcOp">C</button>
-        <button class="calcOp">DEL</button>
-        <button class="fourOp">/</button>
-        <button class="number">7</button>
-        <button class="number">8</button>
-        <button class="number">9</button>
-        <button class="fourOp">*</button>
-        <button class="number">4</button>
-        <button class="number">5</button>
-        <button class="number">6</button>
-        <button class="fourOp">-</button>
-        <button class="number">1</button>
-        <button class="number">2</button>
-        <button class="number">3</button>
-        <button class="fourOp">+</button>
-        <button class="number">0</button>
-        <button class="number">.</button>
-        <button id="equal-btn">=</button>
-      </div>
-    </div>
-
-    <div class="control">
+      <div class="control" id="controlMenu">
+        <button id="toggleControl" class="toggle-button">&#x2190;</button>
         <div id="boxTheme">
-            <label for="theme">
-              <input type="checkbox" name="theme" id="theme" />
-              Modo Dark</label
-            >
-          </div>
-    
+          <label for="theme">
+            <input type="checkbox" name="theme" id="theme" />
+            Modo Dark</label
+          >
+        </div>
+
         <div id="history">
           <h4>Histórico</h4>
           <ul id="history-list"></ul>
         </div>
+      </div>
     </div>
   </body>
 </html>
