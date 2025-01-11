@@ -182,8 +182,40 @@ body {
     left: -1.2em; 
 }
 
-@media (max-width: 900px) {
-    #boxTheme {
+@media (max-width: 1200px) {
+    .control {
         display: none;
     }
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0;
+    }
+
+    #calc {
+        margin: 0;
+    }
+
+    #buttons-container button:hover {
+        opacity: 0.9; 
+    }
+
+    #buttons-container #equal-btn {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #calc {
+        width: 20em; 
+        height: 90vh; 
+    }
+
+    #buttons-container button {
+        font-size: 1.3em;
+    } 
 }
