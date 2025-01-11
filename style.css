@@ -1,20 +1,15 @@
 :root {
     --background: #efe9f0;
-
     --btnTEXTOpCalc: #fff;
     --btnBACKOpCalc: #798897;
-
     --btnTEXTOpMath: #fff;
     --btnBACKOpMath: #8A5E69;
-
     --btnBACKNumbers: #daaed094;
     --btnEqual: #d48d91;
     --colorPrevious: #A66476;
-    
     --textHover: #fff;
     --hover: rgb(56, 56, 56);
     --hoverEqual: #ce3239;
-
     --colorAll: #000;
 }
 
@@ -22,28 +17,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* para que todos os elementos do nosso projeto não passem
-                            do limite da largura do seu elemento pai. Geralmente um 
-                            problema que acontece nos inputs */
-
     font-family: 'Montserrat';
-
     transition: background 0.5s linear, color 0.5s linear;
 }
 
 body {
     background-color: var(--background);
     display: flex;
-    flex-direction: row-reverse;
-    /* alinhar ao centro */
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    margin: 2em 5em;
 }
 
 #calc {
     background-color: var(--background);
     width: 400px;
+    height: 90vh;
     padding: 0.5em;
     display: flex;
     flex-direction: column;
@@ -78,8 +67,6 @@ body {
 #previous-operation,
 #current-operation {
     overflow-wrap: break-word;
-    /* se os valores passarem do espaço definido,
-                                esses numeros vão se "quebrar" pra se adequar ao tamanho */
     padding: 0.2em;
     min-height: 1.7em;
 }
@@ -94,7 +81,7 @@ body {
     background-color: var(--btnBACKNumbers);
     border: 1px solid transparent;
     border-radius: 0.3em;
-    height: 4em;
+    height: 3.8em;
     font-size: 1.3em;
     cursor: pointer;
 }
@@ -104,13 +91,6 @@ body {
     background-color: var(--hover);
     color: var(--textHover);
 }
-
-/*
-#buttons-container .number:hover {
-    background-color: var(--hover);
-    color: #fff;
-}
-*/
 
 #buttons-container #equal-btn {
     grid-column: span 2;
@@ -133,14 +113,49 @@ body {
     color: var(--btnTEXTOpCalc);   
 }
 
+.control {
+    width: 35vw;
+    height: 90vh;
+    margin-left: 1em;
+    padding: 1em;
+    border: 1px solid var(--colorAll);;
+    border-radius: 0.7em;
+}
+
 #boxTheme {
-    position: absolute;
-    left: 75%;
-    top: 10%;
+ text-align: center;
+ color: var(--colorAll);
 }
 
 #theme {
     cursor: pointer;
+}
+
+#history {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid transparent;
+    background: var(--btnBACKOpCalc);
+    color: var(--btnTEXTOpCalc);
+    border-radius: 5px;
+    height: 80vh;
+}
+
+#history h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+
+    overflow-y: auto;
+}
+
+#history-list li {
+    margin-bottom: 5px;
+    font-size: 2em;
 }
 
 @media (max-width: 900px) {
